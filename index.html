@@ -1,0 +1,53 @@
+<h1>某某研究</h1> 
+<p>
+我是xxx，ooo學校，正在進行???計畫的研究<br>  
+本研究想了解 blabla<br>
+作答約須二十分鐘<br>  
+<br>
+</p>
+
+<hr>
+
+<h2>填寫個人資料</h2>
+<form action="https://script.google.com/macros/s/AKfycbzk3Mu5S_ygkjnboLKJoqWHnFqOqTbUyIP3kcKXA9hYhLYvjg8/exec" id="myForm" method="post"   >
+<input type="hidden" name="method" value="write" />
+學號：<input type="text" name="num" placeholder="填入學號" title="填入學號" /><br/>
+稱謂：<input type="text" name="name" placeholder="填入稱謂" title="填入稱謂" /><br/>
+性別：<input type="text" name="sex" placeholder="填入性別" title="填入性別" /><br/>
+  
+<br><hr>
+ 
+<h2>書寫作業</h2>  
+<p>
+填寫完個人資料後，請按「開始作答」按鈕進行書寫作業<br>
+作答時間二十分鐘(1200s)，時間到請停止作答<br>
+</p>  
+  
+ <br/> 
+<input type="button" value="開始作答" onClick="timedCount()">
+<br/> 
+  
+<br/>  
+<p>書寫區</p>
+<textarea name="remark" placeholder="填入註解" title="填入註解" style="width:500px;height:200px;"></textarea><br>  
+<button type="submit" value="提交" id="subbtn" />  提交 ( 已作答時間 <input type="text" id="txt">   ) </button>
+</form>
+<br>
+
+<script>
+  // 計時
+var c=0
+var t
+function timedCount()
+{
+  document.getElementById('txt').value=c
+  c=c+1
+  if(c==10){
+    // document.getElementById("myForm").submit()
+     document.getElementById("subbtn").click();
+    //window.opener=null;
+    //top.window.close();
+  }
+  t=setTimeout("timedCount()",1000)
+}
+</script>
