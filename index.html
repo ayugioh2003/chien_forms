@@ -6,14 +6,67 @@
 <br>
 </p>
 
-<hr>
 
-<h2>填寫個人資料</h2>
 <form action="https://script.google.com/macros/s/AKfycbzk3Mu5S_ygkjnboLKJoqWHnFqOqTbUyIP3kcKXA9hYhLYvjg8/exec" id="myForm" method="post"   >
 <input type="hidden" name="method" value="write" />
-學號：<input type="text" name="num" placeholder="填入學號" title="填入學號" /><br/>
-稱謂：<input type="text" name="name" placeholder="填入稱謂" title="填入稱謂" /><br/>
-性別：<input type="text" name="sex" placeholder="填入性別" title="填入性別" /><br/>
+您的 E-mail(必填)：<input type="text" name="email" placeholder="請填入 E-mail " title="填入email地址" /><br/>
+<hr>
+
+<h2>一、情感方格</h2>
+
+<p>請依照情緒方格(The Affect Grid)的向度，來評估你當下的情緒</p>
+
+
+(1) 請問你現在的心情？(14~24)</br>
+(很不高興)
+  <input type="radio" name="mood_1" id="ra1_14" value="14">
+  <label for="mood">14</label>
+  <input type="radio" name="mood_1" id="ra1_13" value="13">    
+  <label for="mood">13</label>
+  <input type="radio" name="mood_1" id="ra1_12" value="12">
+  <label for="mood">12</label>
+  <input type="radio" name="mood_1" id="ra1_11" value="11">
+  <label for="mood">11</label>
+  <input type="radio" name="mood_1" id="ra1_00" value="00">
+  <label for="mood">00</label>
+  <input type="radio" name="mood_1" id="ra1_21" value="21"> 
+  <label for="mood">21</label>
+  <input type="radio" name="mood_1" id="ra1_22" value="22">
+  <label for="mood">22</label>
+  <input type="radio" name="mood_1" id="ra1_23" value="23">  
+  <label for="mood">23</label>
+  <input type="radio" name="mood_1" id="ra1_24" value="24">
+  <label for="mood">24</label>
+
+(很高興)
+
+<br><br>
+<img src="https://i.imgur.com/Hm1VGS4.png" width="500" >   
+
+<br><br><br>
+(2) 請問你的激動程度？(1~9)<br>
+(很不激動)
+  <input type="radio" name="arousal_1" id="ar1_1" value="1">
+  <label for="mood">1</label>
+  <input type="radio" name="arousal_1" id="ar1_2" value="2">    
+  <label for="mood">2</label>
+  <input type="radio" name="arousal_1" id="ar1_3" value="3">
+  <label for="mood">3</label>
+  <input type="radio" name="arousal_1" id="ar1_4" value="4">
+  <label for="mood">4</label>
+  <input type="radio" name="arousal_1" id="ar1_5" value="5">
+  <label for="mood">5</label>
+  <input type="radio" name="arousal_1" id="ar1_6" value="6"> 
+  <label for="mood">6</label>
+  <input type="radio" name="arousal_1" id="ar1_7" value="7">
+  <label for="mood">7</label>
+  <input type="radio" name="arousal_1" id="ar1_8" value="8">  
+  <label for="mood">8</label>
+  <input type="radio" name="arousal_1" id="ar1_9" value="9">
+  <label for="mood">9</label>
+
+(很激動)<br>
+<img src="https://i.imgur.com/pZHGT4C.png" width="500" >  
   
 <br><hr>
  
@@ -29,7 +82,7 @@
   
 <br/>  
 <p>書寫區</p>
-<textarea name="remark" placeholder="填入註解" title="填入註解" style="width:500px;height:200px;"></textarea><br>  
+<textarea name="text" placeholder="填入註解" title="填入註解" style="width:500px;height:200px;"></textarea><br>  
 <button type="submit" value="提交" id="subbtn" />  提交 ( 已作答時間 <input type="text" id="txt">   ) </button>
 </form>
 <br>
