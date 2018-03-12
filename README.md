@@ -49,6 +49,8 @@
 * [表單選項按鈕 radio buttons - 網頁設計教學站](http://www.webtech.tw/info.php?tid=93)
 * [[筆記] 用 javascript 來取得表單元素內容的值 (javascript 取值) ~ PJCHENder<br> 那些沒告訴你的小細節](https://pjchender.blogspot.tw/2015/11/javascript.html)
 * [Java 程式教學甘仔店: [JavaScript] 取得 input 的 value](http://pclevin.blogspot.tw/2013/10/javascriptinputvalue.html)
+* IE 和 Edge 沒辦法直接讀 form 的 value ... orz
+* [jquery - Javascript document.forms value does not work for Internet Explorer - Stack Overflow](https://stackoverflow.com/questions/43216707/javascript-document-forms-value-does-not-work-for-internet-explorer/43217183)
 
 ```javascript
   function check_page1(){
