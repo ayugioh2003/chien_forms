@@ -112,29 +112,29 @@
 - [ ] 置中頁面
 - [ ] 用 bootstrape 美化介面
 
-2018.0312
+## 2018.0312
 - [x] 用 JS submit form
- * [HTML DOM submit() 方法](http://www.w3school.com.cn/htmldom/met_form_submit.asp)
- * `document.getElementById("myForm").submit()`
+   * [HTML DOM submit() 方法](http://www.w3school.com.cn/htmldom/met_form_submit.asp)
+   * `document.getElementById("myForm").submit()`
 - [x] 必填的項目沒勾選，會無法進行下一題
- * [javascript 取得 radio 的值 | [lifeIs: tooShort to: waste]](https://blog.hsin.tw/2008/javascript-form-radio/)
- * [[筆記] 用 javascript 來取得表單元素內容的值 (javascript 取值) ~ PJCHENder<br> 那些沒告訴你的小細節](https://pjchender.blogspot.tw/2015/11/javascript.html)
+   * [javascript 取得 radio 的值 | [lifeIs: tooShort to: waste]](https://blog.hsin.tw/2008/javascript-form-radio/)
+   * [[筆記] 用 javascript 來取得表單元素內容的值 (javascript 取值) ~ PJCHENder<br> 那些沒告訴你的小細節](https://pjchender.blogspot.tw/2015/11/javascript.html)
 - [x] 禁用 Enter 送出表單
- * [HTML 防止 input 回車提交表單 - CSDN 博客](http://blog.csdn.net/ligang2585116/article/details/44699567)
- * 在 form 表單或 input 中加入：`onkeydown="if(event.keyCode==13){return false;}"`
+   * [HTML 防止 input 回車提交表單 - CSDN 博客](http://blog.csdn.net/ligang2585116/article/details/44699567)
+   * 在 form 表單或 input 中加入：`onkeydown="if(event.keyCode==13){return false;}"`
  
-2018.0311 
+## 2018.0311 
 - [x] 點擊按鈕一次後就禁用按鈕，避免重複輸入指令
 - [x] 透過隱藏、顯示 div 區塊，達成換頁效果 
   * [HTML DOM display 屬性](http://www.w3school.com.cn/htmldom/prop_style_display.asp)
   * [DIV 隱藏技巧 - Wibibi](http://www.wibibi.com/info.php?tid=166)
-  - 'document.getElementById("p1").style.display="none";'
+  - `document.getElementById("p1").style.display="none";`
   
-2018.0310
+## 2018.0310
 - [x] 加入九點量表(label)、插入圖片，完成訂一版
   * [問卷](https://codepen.io/ayugioh2003/pen/EQzGYV?editors=1010)
   
-2018.0306  
+## 2018.0306  
 - [x] 倒數計時，在某頁需要限制作答時間
   * [JavaScript 計時](http://www.w3school.com.cn/js/js_timing.asp)
 - [x] 抓日期，寫進資料庫方便排序與除去無效資料
