@@ -105,6 +105,10 @@
 # TODO
 
 - [ ] 修改成標準的 html 頁面
+  * [檢查網站是否通過 HTML5 驗證？ - 香腸炒魷魚](https://sofree.cc/html5-validator/)
+  * 第一次檢查有 86 個 error + warning，嚇死人了 XD
+  * https://i.imgur.com/xapy4OR.png
+  * https://i.imgur.com/1tqbrUk.png
 - [ ] 置中頁面
 - [ ] 用 bootstrape 美化介面
 - [x] 用 JS submit form
