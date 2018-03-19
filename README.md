@@ -121,6 +121,19 @@ Google app script 內容和資料庫連結，等日後有機會再附上
 - [ ] 置中頁面
 - [ ] 用 bootstrape 美化介面
 
+## 2018.0319
+
+ - [x] 修改指導語
+
+## 2018.0317
+
+- [x] 新增展開說明 (與換頁功能手法相似)
+- [x] 倒數計時後自動跳轉下一頁
+- [x] 隱藏 input，把被隱藏的某個 name 的 input 的 value 傳出去
+  * [HTML 表單隱藏欄位 input type=hidden - 網頁設計教學站](http://www.webtech.tw/info.php?tid=96)
+  * [HTML Form input hidden - Wibibi](http://www.wibibi.com/info.php?tid=195)
+  - `input type=hidden`
+ 
 ## 2018.0312
 - [x] 用 JS submit form
    * [HTML DOM submit() 方法](http://www.w3school.com.cn/htmldom/met_form_submit.asp)
