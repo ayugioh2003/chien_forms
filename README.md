@@ -113,11 +113,12 @@ Google app script 內容和資料庫連結，等日後有機會再附上
 
 # TODO
 
-- [ ] 置中頁面
 - [ ] 用 bootstrape 美化介面
 
 ## 2018.0324
 
+- [x] 置中頁面
+  * 感謝 taker 的切版祕笈，剛看完就派上用場了
 - [x] 修改成標準的 html 頁面
   * [檢查網站是否通過 HTML5 驗證？ - 香腸炒魷魚](https://sofree.cc/html5-validator/)
   * 第一次檢查有 86 個 error + warning，嚇死人了 XD
