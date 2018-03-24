@@ -30,6 +30,7 @@
 
       <div id="page1" onkeydown="if(event.keyCode==13){return false;}">
         <h1>個人行為與心情之研究</h1>
+        <div style="text-align:right">※請使用google chrome或Firefox瀏覽器作答</div>
         <p>
           您好，
           <br> 感謝您參與本研究。
@@ -42,15 +43,17 @@
           <br>
           <br> 輔仁大學 臨床心理學系 黃意茜 敬上
           <br>
-          <br> ※請使用google chrome或Firefox瀏覽器作答
+          <br> 
         </p>
         <p>---</p>
         <p>請填入身份證字號前五碼，如:AXXXX。若無身份證則請填護照前五碼(含英文)。<br>
           之後會以這五碼來核對是否全程參與</p> 
         <span>身份證前五碼：</span>
         <input type="text" name="email" placeholder="請填入身份證前五碼 " title="填入email地址" id="input_page1" />(必填)
+        <br>
         <p>---</p>
-        <p>填完身份證後，請按開始作答鈕</p>
+        <br>
+        <p>填完身份證前五碼後，請按下方案按鈕開始作答</p>
         <button type="button" onclick="check_page1()">開始作答(0/3)</button>
         <hr>
       </div>
@@ -60,7 +63,7 @@
       <div id="page2" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
         <h2>一、情感方格</h2>
 
-        <p>如何透過情感方格評估你的情緒(若想更了解情感方格的填寫，請點這裡) </p>
+        <span>如何透過情感方格評估你的情緒(若想更了解情感方格的填寫，請點這裡) </span>
         <button type="button" onclick="switch_grid1()">開啟/關閉說明</button>
 
         <div id="grid1" style="display:none">
@@ -117,7 +120,7 @@
 
         <p>---</p>
 
-
+        <br>
         <p>請依照情感方格(The Affect Grid)的向度，來評估你當下的情緒</p>
 
         <div>(1) 請問你現在的心情？(14~24)(必填)</div>
