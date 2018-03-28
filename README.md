@@ -115,6 +115,14 @@ Google app script 內容和資料庫連結，等日後有機會再附上
 
 - [ ] 用 bootstrape 美化介面
 
+## 2018.0328
+
+- [x] Google 中文字體
+  * [[技術分享] 如何引用 google 雲端字體到網頁設計中 ~ PJCHENder<br> 那些沒告訴你的小細節](https://pjchender.blogspot.tw/2016/09/google.html)
+  * [【設計資源】 - Google Fonts 免費雲端字庫 - 實作篇 - 【飛肯設計學苑】教學](http://www.flycan.com/article/css/google-fonts-exercise-2352.html)
+  * [Day6 [CSS 介紹 - 1] - iT 邦幫忙:: 一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10185250)
+
+
 ## 2018.0324
 
 - [x] 置中頁面
