@@ -1,74 +1,12 @@
-<html>
-
-    <head>
-
-        <title> 統計地圖 API 基本範例 </title>
-      
-        <script>
-          var ID = 02E8F7DE6B5A25A387F9134615CEA5738239DEB4ADDEEBFE59E7A203FCF6161BED56BB0C0360B4969B9420F012939CAF885A841B92A2C796C640690D50CFD671;
-;
-          var apiKey = 0609505506443A6BB3ABF418D0E973CF0B238364032CAB197DC4593733E989F295E3053A0C3E7F76BD6EBC736319D06E0766BA7D9A0C784BA611EF41A90ADA9C8345B23BF50E3F56D761E4AAF62AB0A87BD6EB56B93ADADC961296E559C366C167FD394131042513D7578D517C06341A9280CF2CDEC005FDDF2C8B5C6665196308F1DF97AA3720D95FA6B3F52E9DC2A88E9FB2D15E7F58014E40B328C68B09775FA203B166469DEFAFFEDB8AB08E0FCEAF55AC9934B7A3526BB4770D3C0EE2216593F9E51FC3548F13455561E9CB8D1A31A9FBA9757115BB50FAD37619A970AA2ECCA5F83C6B21EF60E3844FA4F08D55B3FF6091FE7938CF7A5151F79EDED0C2A229B1964DA6A8D2E93A42508E9FBBD301D167AE3B505E772CCA878290BB3175D7E34A866414F4C65C4FD993506A1C1EEFDDE0D5603F1988D3E0F73F8CC101A9A0A78DDC7943791FBDD252DF058E28ADDFC7656ED63B0A32867D6C0243EF6F317E663EC305C05723D71652EC14207E13FB16E4BC50BE81D9EFD7DC1C8C54AF56C015DBF785252E4516B9A2BAE9F9BFD90B238364032CAB192C60BB6597BE31D5855A697ABF12C0A9E7D3C74085BFE9A16C4604D39675C431BB9BA623810B7613D6B5F396F7A58913F7B74FD6485452D2FEBAAF28A22A2CEFE865D12E37A7EBFBE4B113B0E951A74324973FF7447B3532CB3DC6D8BDDD96AAF48E37EC060A3FF9000388EEA32F41260B238364032CAB19CB9DA0124A60AB3E7A2EDAFBCFBF64F4500B4B3D86C9BDBD224AD0BAEE40C0AFFC7A3B30D1138B24FF09A9AB9A22BE42CAF159EBE894A3F889A8675F8EF70E460C8E3EDDFF41B0AAB135E1FDBC45DBEE14EED1C324198975C428B5F95E62694D76D205D1F35E65054C89C9DEB9AF87FDC083432158EB1281647DA3BE858AC05B732E4FB4729DC556F2FC45AC9DF08EE0;
-;
-          var address = "http://segisapi.moi.gov.tw/StatAPI/statistics?appid=" + ID + "&apikey=" + apiKey
-        </script>
-
-        <script language="javascript" type="text/javascript" src= address ></script>
-
-        <script type="text/javascript">
-
-            var dataDB;
-
-            function init() {                                                                                  // 初始化統計地圖物件
-
-                var dataSet = new Array();
-
-                var tmp = {tableName: "327FI_A5C1",fieldsId: ["H_CNT"]};　// 呼叫社經資料庫資料
-
-                dataSet.push(tmp);
-
-                // 設定統計資料之時序及空間範圍
-
-                var timeOpts = {timeSeries: true,time: ["102Y06M"]}
-
-                var dataOption = {dataType:DataType.ADMIN, timeOpts:timeOpts, dataLevel:DataLevel.COUNTY}
-
-                var areaSelect = {areaSelectType:AreaSelectType.DISTRICT, districtType:DistrictType.ALL};
-
-                dataDB = new DataDB(dataSet, dataOption, CoordSystem.EPSG3826, areaSelect); // 設定資料物件
-
-                DrawStatMap(dataDB);                                                        // 執行統計地圖 (面量圖) 繪製指令
-
-            }
-
-            function DrawStatMap(data) {                                                        // 設定統計地圖 (面量圖) 繪製參數
-
-                var mColor = {maxColor: "#7c0505", minColor: "#ffb9b9", defaultColor: "#EEEEEE"};                    
-
-                var pChoropleth = {classifyMethod:ClassifyMethod.QUANTILE, classes:5, color:mColor, useInt: true};
-
-                var option = {pChoropleth:pChoropleth};
-
-                var containerObj = document.getElementById("MapView"),
-
-                var Map = new StatMap(containerObj, data,MapKind.CHOROPLETH, option);
-
-                       Map.drawMap(function (result){});                             // 繪製統計地圖 (面量圖)
-
-            }
-
-        </script>
-
-    </head>
-
-    <body onload="init()">
-
-        <font size="4" face="Microsoft JhengHei">102 年 6 月 - 行政區縣市醫療院所家數統計 </font><br/>
-
-        <div id="MapView" style="width:600px;height:500px;"></div>         <!-- 建立統計地圖容器 -->
-
-        <font size="4" face="Microsoft JhengHei">（資料來源：統計地圖 API 應用資料庫）</font><br/>
-
-    </body>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blank page</title>
+</head>
+<body>
+    <p>nothing here</p>
+</body>
 </html>
-
