@@ -1,12 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blank page</title>
-</head>
-<body>
-    <p>nothing here</p>
-</body>
+<html>
+
+    <head>
+
+        <title> 統計地圖 API 基本範例 </title>
+      
+        <script>
+          var ID = D673818A36125F18180E79C58AA4118A7ED00ECDEE23146C3C15FE33EC179F6E764D1B3A0163A737851ECC0C4429D269CE1052FA81A4C3BED7A02340339C0AB6;
+          var apiKey = 0609505506443A6BB3ABF418D0E973CF0B238364032CAB197DC4593733E989F295E3053A0C3E7F76BD6EBC736319D06EF0E7ABED264AC6DD54A204FE2AC62D18A1110E1DF5B2F2062A713F21E4EADE23956258ADEDB2A26FA36532C85810553743D5A2861091C0A00F4B77C4018FF849BB311E13A1D1FBE9C6EB64D349C7CD3C81850FA172B00A7CE28DB8F3166713B91CA74BD8AAF4FF4FDC54A25EDAD767B8D59A7EE84983D722E17F27E5051738CC428C3B0005DCFADD05AA653403FE4B15550B50A73092071E7823FED2590B154E67D9DA02AE632BE5D560A9BF6311F25E6229030DAD475EBD9BDCBB027D9E2048A779FE8CC72EEE3F2527D90BDD8641A64C634340FC5BFB0FC06C3C9466E95EF810E87A432DEBF539D8AA3A390F51F6831B440111F0FD27AD17A085103BAA0E2AFE63EF3375A131FED3E0F73F8CC101A9A0A78DDC7943791F22A74DB30750C274EB82A8E509F3C9B590E10D3D649B9CF51EE754CFCAC781A41AF847EC312E178D1ED66D003871609EAF2F05772F47CDE44258C10392E2427C08255E13625BBD707000DD0F9E626E08C055691A0D391F1FBDB579224BC6B64C69A2C077438B7CE870FBA608684A7343ABA33B87F58C2E35C26DCDC3650EC30AEFD7DC1C8C54AF56359EC940B9ED7D3F9BE4EBD1177B662676C0A6D5C0E7FC1C721820DF7713839A2C5DE9FA1B75E45E9D6A214642E92BE297627582210BE2F0DDFFE8974F7FD90F33A52643EC6DCAEF44F7E33BFF6F519313A3FD4D3D01E9176C955A24BC54FCC355077DC74B62142BD3C96A28E167BE9CC6FD2304A5C21469CAE9A2E69B8803712D6C2BFAE90C8F2D882F421CA3BEE977856AF7773837F61834D6C89C163C84EFEDAE8AEFEE9E4E9A
+;
+          var address = "http://segisapi.moi.gov.tw/StatAPI/statistics?appid=" + ID + "&apikey=" + apiKey
+        </script>
+
+        <script language="javascript" type="text/javascript" src= address ></script>
+
+        <script type="text/javascript">
+
+            var dataDB;
+
+            function init() {                                                                                  // 初始化統計地圖物件
+
+                var dataSet = new Array();
+
+                var tmp = {tableName: "327FI_A5C1",fieldsId: ["H_CNT"]};　// 呼叫社經資料庫資料
+
+                dataSet.push(tmp);
+
+                // 設定統計資料之時序及空間範圍
+
+                var timeOpts = {timeSeries: true,time: ["102Y06M"]}
+
+                var dataOption = {dataType:DataType.ADMIN, timeOpts:timeOpts, dataLevel:DataLevel.COUNTY}
+
+                var areaSelect = {areaSelectType:AreaSelectType.DISTRICT, districtType:DistrictType.ALL};
+
+                dataDB = new DataDB(dataSet, dataOption, CoordSystem.EPSG3826, areaSelect); // 設定資料物件
+
+                DrawStatMap(dataDB);                                                        // 執行統計地圖 (面量圖) 繪製指令
+
+            }
+
+            function DrawStatMap(data) {                                                        // 設定統計地圖 (面量圖) 繪製參數
+
+                var mColor = {maxColor: "#7c0505", minColor: "#ffb9b9", defaultColor: "#EEEEEE"};                    
+
+                var pChoropleth = {classifyMethod:ClassifyMethod.QUANTILE, classes:5, color:mColor, useInt: true};
+
+                var option = {pChoropleth:pChoropleth};
+
+                var containerObj = document.getElementById("MapView"),
+
+                var Map = new StatMap(containerObj, data,MapKind.CHOROPLETH, option);
+
+                       Map.drawMap(function (result){});                             // 繪製統計地圖 (面量圖)
+
+            }
+
+        </script>
+
+    </head>
+
+    <body onload="init()">
+
+        <font size="4" face="Microsoft JhengHei">102 年 6 月 - 行政區縣市醫療院所家數統計 </font><br/>
+
+        <div id="MapView" style="width:600px;height:500px;"></div>         <!-- 建立統計地圖容器 -->
+
+        <font size="4" face="Microsoft JhengHei">（資料來源：統計地圖 API 應用資料庫）</font><br/>
+
+    </body>
+
 </html>
+
