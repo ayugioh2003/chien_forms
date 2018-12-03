@@ -181,3 +181,10 @@ Google app script 內容和資料庫連結，等日後有機會再附上
 - [x] 找能放前端程式碼的地方: ghpage, codepen
   * [[教學] 如何在 GitHub 建立靜態網站 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10171911)
   - https://codepen.io/ayugioh2003/pen/mxJVgP?editors=1000
+
+## 2018.1203
+- [x] 字體
+  * [重置 (Reboot) · Bootstrap 4 繁體中文手冊 [六角學院譯]](https://bootstrap.hexschool.com/docs/4.1/content/reboot/)
+- [x] 時鐘倒數
+  * [JavaScript 的除法 - 網頁設計教學站](http://www.webtech.tw/info.php?tid=JavaScript_%E7%9A%84%E9%99%A4%E6%B3%95)
+  * [js 除法 取整 - xinyuan的专栏 - CSDN博客](https://blog.csdn.net/xinyuan_java/article/details/40300873)
