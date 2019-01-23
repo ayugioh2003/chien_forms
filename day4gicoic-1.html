@@ -24,7 +24,7 @@
     <form action="https://script.google.com/macros/s/AKfycbzk3Mu5S_ygkjnboLKJoqWHnFqOqTbUyIP3kcKXA9hYhLYvjg8/exec" id="myForm"
       method="post">
       <input type="hidden" name="method" value="write" />
-      <input type="hidden" name="version" value="N" />
+      <input type="hidden" name="version" value="G" />
       <input type="hidden" name="day" value="4" />
       <!-- <div id="version" style="display:none">
         版本
@@ -63,7 +63,7 @@
         <br>
         <br>
         <p>填寫完畢後，請按下方按鈕開始作答</p>
-        <button type="button" onclick="check_page1()">開始作答(0/4)</button>
+        <button type="button" onclick="check_page1()">開始作答(0/3)</button>
         <hr>
       </div>
 
@@ -191,7 +191,7 @@
 
         <br>
         <br>
-        <button type="button" onclick="check_page2()">下一頁面(1/4)</button>
+        <button type="button" onclick="check_page2()">下一頁面(1/3)</button>
         <br>
         <hr>
       </div>
@@ -201,14 +201,19 @@
         <div id="page3_guide" style="display:none">
           <h2>二、書寫作業</h2>
           <p>
-            今天，請你描述<strong>你最常走的一條路線</strong>。在你書寫的時候，希望你能盡可能客觀，將你使用時間的<strong>細節</strong>依據事實寫下。<strong>不需要書寫你的情緒或觀點</strong>，請保持<strong>完全客觀</strong>。寫得<strong>越詳細越好</strong>。你寫的所有內容將完全保密。不必在意句子是否流暢、有無錯字。
-            <br><br>
-            唯一的規則是，<strong>一旦你開始寫，請持續寫到時間結束(15分鐘)再停止</strong>。
+            請你反思並書寫你「當天發生的三件好事」。這些事可以是大事(例如，某個孩子的誕生)，也可以是小事(例如，看美麗的夕陽)。當你寫下三件好事後，請問自己「為什麼今天會發生這件事？」以及「我該如何讓這樣的事更常發生在我的生命中？」並做書寫，<strong>寫得越詳細越好</strong>。以下為需要書寫的內容：
+            <ol>
+              <li>三件好事</li>
+              <li>為什麼今天會發生這件事？</li>
+              <li>我該如何讓這樣的事更長發生在我的生命中？</li>
+            </ol>
+            
+            你寫的所有內容將完全保密。不必在意句子是否流暢、有無錯字。唯一的規則是，<strong>一旦你開始寫，請持續寫到時間結束(15分鐘)再停止</strong>。
             <br>
           </p>
 
           <br />
-          <input type="button" id="countbtn" value="開始作答(2/4)" onClick="timedCount();show(page3_text)">
+          <input type="button" id="countbtn" value="開始作答(2/3)" onClick="timedCount();show(page3_text)">
         </div>
 
         <br />
@@ -296,17 +301,7 @@
 
         <br>
         <br>
-        <button type="button"  onclick="check_page4()">下一頁面(3/4)</button>
-        <hr>
-      </div>
-
-      <!-- 第五頁|詢問 email -->
-      <div id="page5" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
-        <p>因許多人反映在填寫問卷時，研究代號有輸入錯誤的狀況，因此麻煩您再填一次 email，以利我們進行雙重確認，非常感謝您！</p>
-        <input type="text" name="email_true" placeholder="請填入 email" title="填入email地址" id="input_page5" />（必填）
-        <br>
-        <br>
-        <button type="button" id="subbtn"  onclick="check_page5()">提交</button>
+        <button type="button" value="提交" id="subbtn" onclick="check_page4()">提交</button>
         <hr>
       </div>
     </form>
@@ -344,18 +339,17 @@
 
 
     // 計時書寫的時間，時間到執行某個指令 書寫時間 15*60
-    var c = 5 //15 * 60
+    var c = 15*60
     var t
 
     function timedCount() {
       document.getElementById('txt').value = `${parseInt(c / 60)}分鐘 ${c % 60}秒`
       c = c - 1
 
-      if (c < 1 * 60) {
+      if (c<1*60) {
         document.getElementById('txt').style.color = '#FFFFFF'
         document.getElementById('txt').style.backgroundColor = '#EE9999'
       }
-
 
       if (c == -2) {
         hide(page3)
@@ -416,28 +410,11 @@
       var arousal2_value = document.getElementById('myForm').arousal_2.value
 
       if (mood2_value && arousal2_value) {
-        hide(page4);
-        show(page5);
+        document.getElementById("myForm").submit()
       }
       else {
         alert(page4_alert);
         return false;
-      }
-    }
-
-
-    function check_page5() {
-
-      var page5_alert = "請填入 email";
-      var page5_value = document.getElementById("input_page5").value
-
-      if (page5_value = null || page5_value == "") {
-        page5_alert = "請填入 email";
-        alert(page5_alert);
-        return false;
-      }
-      else {
-        document.getElementById("myForm").submit()
       }
     }
 
@@ -454,7 +431,6 @@
     var page3_guide = "page3_guide"
     var page3_text = "page3_text"
     var page4 = "page4"
-    var page5 = "page5"
 
     function hide(obj) {
       document.getElementById(obj).style.display = "none";
