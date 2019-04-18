@@ -115,6 +115,32 @@ Google app script 內容和資料庫連結，等日後有機會再附上
 
 - [ ] 用 bootstrape 美化介面
 
+## 2019.0418 
+
+- [x] HTML 模板
+    * [Gulp 學習 5 - 建立 HTML 模板 - OXXO.STUDIO](https://www.oxxostudio.tw/articles/201503/gulp-5-html-extend.html)
+    * [gulp-html-extend - npm](https://www.npmjs.com/package/gulp-html-extend)
+    * [使用 gulp 實現項目模板化 | HcySunYang](http://hcysun.me/2016/01/06/%E4%BD%BF%E7%94%A8gulp%E5%AE%9E%E7%8E%B0%E9%A1%B9%E7%9B%AE%E6%A8%A1%E6%9D%BF%E5%8C%96/)
+    * [使用 gulp-file-include 構建前端靜態頁面 - 叙帝利 - 博客園](https://www.cnblogs.com/nzbin/p/7467546.html)
+
+- 參考 gulp ejs
+    * [使用 gulp+ejs 模塊化 html | Yusen's Blog | 學習彎道超車的技巧！](https://imys.net/20150908/gulp-ejs-module.html)
+    * [前端樣板結合 Gulp 處理流程｜SoarLin's blog](https://soarlin.github.io/2016/12/26/frontend-templates-with-gulp/)
+    * [SoarLin/f2e-template](https://github.com/SoarLin/f2e-template)
+
+    
+## 2019.0417
+
+- [x] 正則表達式驗證 email
+    * [[Javascript] Regular Expression – Email 表單驗證 - iT 邦幫忙：：一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10094951)
+    * [筆記｜Javascript 正規表達式 #1 - Email 驗證 - Dez.tw](https://dezchuang.github.io/2017/07/05/022_regexp_1/)
+    * [web 前端之如何書寫正則表示式](https://question.itread01.com/exyyip.html)
+    * [郵箱 / 郵件地址的正則表達式及分析 (JavaScript，email，regex) - 掘金](https://juejin.im/post/5aa637146fb9a028d663d09d)
+    * [regex - How to validate an email address in JavaScript? - Stack Overflow](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript)
+    * [Regulex：JavaScript Regular Expression Visualizer](https://jex.im/regulex/#!flags=&re=%5E%5Cw%2B((-%5Cw%2B)%7C(%5C.%5Cw%2B))*%5C%40%5BA-Za-z0-9%5D%2B((%5C.%7C-)%5BA-Za-z0-9%5D%2B)*%5C.%5BA-Za-z%5D%2B%24)
+    * [uneditable input demo](https://codepen.io/ayugioh2003/pen/QPLjrb?editors=1111)
+
+
 ## 2018.0328
 
 - [x] Google 中文字體

@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" name="viewport" content="width= device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> 個人行為與心情之研究 </title>
-  <style>
-    /* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css); */
-    .container {
-      margin: 0 auto;
-      padding: 5px 5px;
-      width: 700px;
-    }
-    body {
-      font-family: '-apple-system', 'BlinkMacSystemFont', "Segoe UI", "Roboto",'Noto Sans TC', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
-  </style>
+  <link rel="stylesheet" href="./css/all.css">
 </head>
 
 <body>
-  <!-- 第一頁|指導語 -->
   <!-- 表單開始處 -->
   <div class="container">
-    <form action="https://script.google.com/macros/s/AKfycbzk3Mu5S_ygkjnboLKJoqWHnFqOqTbUyIP3kcKXA9hYhLYvjg8/exec" id="myForm"
-      method="post">
-      <input type="hidden" name="method" value="write" />
-      <input type="hidden" name="version" value="N" />
-      <input type="hidden" name="day" value="1" />
-      <!-- <div id="version" style="display:none">
-        版本
-        <input type="text" name="version" value="N">
-        <input type="text" name="day" value="1">
-      </div> -->
+    <form action="https://script.google.com/macros/s/AKfycbzk3Mu5S_ygkjnboLKJoqWHnFqOqTbUyIP3kcKXA9hYhLYvjg8/exec"
+      id="myForm" method="post">
 
+<!-- start coding -->
+<input type="hidden" name="method" value="write" />
+<input type="hidden" name="version" value="N" />
+<input type="hidden" name="day" value="2" />
+
+<!-- end coding -->
+
+      <!-- 第一頁|指導語 -->
       <div id="page1" onkeydown="if(event.keyCode==13){return false;}">
         <h1>個人行為與心情之研究</h1>
         <div style="text-align:right">※請使用 Google Chrome 或 Firefox 瀏覽器作答</div>
@@ -54,13 +45,19 @@
         </p>
         <p>---</p>
         <h2>〇、個人資料填寫</h2>
-        <p>請填入身分證(或護照)前五碼，以及出生月日，作為研究代號。 <br>
-          (例如，身分證字號為A123456789，生日為4月4日的話，請填寫 A12340404)<br>
-          因本研究為匿名研究，研究結束後，將以此字串核對是否全程參與。 <br>
-          請確保每次填寫相同的字串，以利確認為同一人之資料，並保障領取禮券與抽獎之權益</p>
-        <span>研究代號：身分證(或護照)前五碼以及出生月日</span>
-        <input type="text" name="email" placeholder="請填入字串" title="填入email地址" id="input_page1" />（必填）
-        <br>
+        <p>請填入電子信箱，以便產出研究代號。 <br>
+          因本研究為匿名研究，研究結束後，將以此信箱產生的研究代號核對是否全程參與。 <br>
+          請確保每次填寫相同的信箱，以利確認為同一人之資料，並保障領取禮券與抽獎之權益</p>
+        <div>
+          <label for="email_true">電子信箱：</label>
+          <input type="email" name="email_true" id="email_true" placeholder="請輸入 email">
+        </div>
+        <div>
+          <label for="email_true">研究代號：</label>
+          <input type="text" name="email" placeholder="請填入字串" title="填入email地址" id="email" />
+          <span>（依照 email 自動產生）
+          </span>
+        </div>
         <br>
         <p>填寫完畢後，請按下方按鈕開始作答</p>
         <button type="button" onclick="check_page1()">開始作答(0/3)</button>
@@ -68,7 +65,6 @@
       </div>
 
       <!-- 第二頁|一、情感方格 -->
-
       <div id="page2" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
         <h2>一、情感方格</h2>
 
@@ -136,23 +132,23 @@
         <div>(1) 請問你現在的心情？(14~24)(必填)</div>
         <div>
           (很不高興)
-          <input type="radio" name="mood_1" id="ra1_14" value="14">
+          <input type="radio" name="mood_1" id="ra1_14" value="1">
           <label for="ra1_14">14</label>
-          <input type="radio" name="mood_1" id="ra1_13" value="13">
+          <input type="radio" name="mood_1" id="ra1_13" value="2">
           <label for="ra1_13">13</label>
-          <input type="radio" name="mood_1" id="ra1_12" value="12">
+          <input type="radio" name="mood_1" id="ra1_12" value="3">
           <label for="ra1_12">12</label>
-          <input type="radio" name="mood_1" id="ra1_11" value="11">
+          <input type="radio" name="mood_1" id="ra1_11" value="4">
           <label for="ra1_11">11</label>
-          <input type="radio" name="mood_1" id="ra1_00" value="00">
+          <input type="radio" name="mood_1" id="ra1_00" value="5">
           <label for="ra1_00">00</label>
-          <input type="radio" name="mood_1" id="ra1_21" value="21">
+          <input type="radio" name="mood_1" id="ra1_21" value="6">
           <label for="ra1_21">21</label>
-          <input type="radio" name="mood_1" id="ra1_22" value="22">
+          <input type="radio" name="mood_1" id="ra1_22" value="7">
           <label for="ra1_22">22</label>
-          <input type="radio" name="mood_1" id="ra1_23" value="23">
+          <input type="radio" name="mood_1" id="ra1_23" value="8">
           <label for="ra1_23">23</label>
-          <input type="radio" name="mood_1" id="ra1_24" value="24">
+          <input type="radio" name="mood_1" id="ra1_24" value="9">
           <label for="ra1_24">24</label>
 
           (很高興)</div>
@@ -195,17 +191,21 @@
         <br>
         <hr>
       </div>
-      <!-- 第三頁|二、書寫作業 -->
 
+      <!-- 第三頁|二、書寫作業 -->
       <div id="page3">
         <div id="page3_guide" style="display:none">
           <h2>二、書寫作業</h2>
-          <p>
-            接下來四天，我希望你書寫你是如何使用你的時間。每次書寫，你會得到不同的書寫任務，請你書寫你使用時間的方式。在你書寫的時候，希望你能盡可能客觀，將你使用時間的<strong>細節</strong>依據事實寫下。<strong>不需要書寫你的情緒或觀點</strong>，請保持<strong>完全客觀</strong>。寫得<strong>越詳細越好</strong>。今天，請你描述<strong>昨天從你起床到上床睡覺之間你做了哪些事情</strong>。例如，你可能會從你的鬧鐘停止後、你下了床，開始寫起。你可以書寫你吃了什麼、你去了哪裡、你從一個地方到下一個地方的過程你經過哪些建築物。最重要的是，在你書寫的過程要非常客觀。你寫的所有內容將完全保密。不必在意句子是否流暢、有無錯字。
-            <br><br>
-            唯一的規則是，<strong>一旦你開始寫，請持續寫到時間結束(15分鐘)再停止</strong>。
-            <br>
-          </p>
+
+<!-- start writing_guide -->
+<p>
+  今天，請你描述<strong>你未來一周將會做什麼事</strong>。在你書寫的時候，希望你能盡可能客觀，將你使用時間的<strong>細節</strong>依據事實寫下。<strong>不需要書寫你的情緒或觀點</strong>，請保持<strong>完全客觀</strong>。寫得<strong>越詳細越好</strong>。你寫的所有內容將完全保密。不必在意句子是否流暢、有無錯字。
+  <br><br>
+  唯一的規則是，<strong>一旦你開始寫，請持續寫到時間結束(15分鐘)再停止</strong>。
+  <br>
+</p>
+
+<!-- end writing_guide -->
 
           <br />
           <input type="button" id="countbtn" value="開始作答(2/3)" onClick="timedCount();show(page3_text)">
@@ -227,12 +227,9 @@
       </div>
 
       <!-- 第四頁|三、情感方格 -->
-
       <div id="page4" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
 
         <h2>三、情感方格</h2>
-
-
 
         <p>請依照情感方格(The Affect Grid)的向度，
           <strong>「再評估一次」</strong>你目前的情緒</p>
@@ -240,23 +237,23 @@
 
         <div>(1) 請問你現在的心情？(14~24)(必填)</div>
         <div>(很不高興)
-          <input type="radio" name="mood_2" id="ra2_14" value="14">
+          <input type="radio" name="mood_2" id="ra2_14" value="1">
           <label for="ra2_14">14</label>
-          <input type="radio" name="mood_2" id="ra2_13" value="13">
+          <input type="radio" name="mood_2" id="ra2_13" value="2">
           <label for="ra2_13">13</label>
-          <input type="radio" name="mood_2" id="ra2_12" value="12">
+          <input type="radio" name="mood_2" id="ra2_12" value="3">
           <label for="ra2_12">12</label>
-          <input type="radio" name="mood_2" id="ra2_11" value="11">
+          <input type="radio" name="mood_2" id="ra2_11" value="4">
           <label for="ra2_11">11</label>
-          <input type="radio" name="mood_2" id="ra2_00" value="00">
+          <input type="radio" name="mood_2" id="ra2_00" value="5">
           <label for="ra2_00">00</label>
-          <input type="radio" name="mood_2" id="ra2_21" value="21">
+          <input type="radio" name="mood_2" id="ra2_21" value="6">
           <label for="ra2_21">21</label>
-          <input type="radio" name="mood_2" id="ra2_22" value="22">
+          <input type="radio" name="mood_2" id="ra2_22" value="7">
           <label for="ra2_22">22</label>
-          <input type="radio" name="mood_2" id="ra2_23" value="23">
+          <input type="radio" name="mood_2" id="ra2_23" value="8">
           <label for="ra2_23">23</label>
-          <input type="radio" name="mood_2" id="ra2_24" value="24">
+          <input type="radio" name="mood_2" id="ra2_24" value="9">
           <label for="ra2_24">24</label>
 
           (很高興)
@@ -299,145 +296,22 @@
         <button type="button" value="提交" id="subbtn" onclick="check_page4()">提交</button>
         <hr>
       </div>
+
+      <!-- 第五頁|詢問 email -->
+      <!-- <div id="page5" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
+        <p>因許多人反映在填寫問卷時，研究代號有輸入錯誤的狀況，因此麻煩您再填一次 email，以利我們進行雙重確認，非常感謝您！</p>
+        <input type="text" name="email_true" placeholder="請填入 email" title="填入email地址" id="input_page5" />（必填）
+        <br>
+        <br>
+        <button type="button" id="subbtn" onclick="check_page5()">提交</button>
+        <hr>
+      </div> -->
+
     </form>
   </div>
 
-
-
   <!-- 語法區 -->
-  <script>
-
-    // 情緒方格說明
-
-    var grid1_count = 1;
-    function switch_grid1() {
-      if (grid1_count % 2 == 1) {
-        show(grid1)
-      }
-      else {
-        hide(grid1)
-      }
-      grid1_count = grid1_count + 1
-    }
-
-    var grid2_count = 1;
-    function switch_grid2() {
-      if (grid2_count % 2 == 1) {
-        show(grid2)
-      }
-      else {
-        hide(grid2)
-      }
-      grid2_count = grid2_count + 1
-    }
-
-
-
-    // 計時書寫的時間，時間到執行某個指令 書寫時間 15*60
-    var c = 15 * 60
-    var t
-
-    function timedCount() {
-      document.getElementById('txt').value = `${parseInt(c / 60)}分鐘 ${c % 60}秒`
-      c = c - 1
-
-      if (c < 1 * 60) {
-        document.getElementById('txt').style.color = '#FFFFFF'
-        document.getElementById('txt').style.backgroundColor = '#EE9999'
-      }
-
-
-      if (c == -2) {
-        hide(page3)
-        show(page4)
-        // document.getElementById("myForm").submit()
-        //document.getElementById("subbtn").click();
-        //window.opener=null;
-        //top.window.close();
-      }
-      document.getElementById("countbtn").disabled = true;
-      t = setTimeout("timedCount()", 1000)
-    }
-
-
-    // 必須填完選項才能換頁
-
-    function check_page1() {
-
-      var page1_alert = "請填入資料";
-      var page1_value = document.getElementById("input_page1").value
-
-      if (page1_value = null || page1_value == "") {
-        page1_alert = "請填入資料";
-        alert(page1_alert);
-        return false;
-      }
-      else if (document.getElementById("input_page1").value.length != 9) {
-        page1_alert = "請輸入剛好九碼的字串(身份證前五碼+出生月日)。 ex: A12340404";
-        alert(page1_alert);
-        return false;
-      }
-      else {
-        hide(page1);
-        show(page2);
-      }
-    }
-
-    function check_page2() {
-
-      var page2_alert = "請點擊選項";
-      var mood1_value = document.getElementById('myForm').mood_1.value
-      var arousal1_value = document.getElementById('myForm').arousal_1.value
-
-      if (mood1_value && arousal1_value) {
-        hide(page2);
-        show(page3_guide);
-      }
-      else {
-        alert(page2_alert);
-        return false;
-      }
-    }
-
-    function check_page4() {
-
-      var page4_alert = "請點擊選項";
-      var mood2_value = document.getElementById('myForm').mood_2.value
-      var arousal2_value = document.getElementById('myForm').arousal_2.value
-
-      if (mood2_value && arousal2_value) {
-        document.getElementById("myForm").submit()
-      }
-      else {
-        alert(page4_alert);
-        return false;
-      }
-    }
-
-
-
-    //點擊按鈕後，隱藏上一頁，打開下一頁
-
-    var countbtn = "countbtn"
-    var page1 = "page1"
-    var page2 = "page2"
-    var grid1 = "grid1"
-    var gird2 = "grid2"
-    var page3 = "page3"
-    var page3_guide = "page3_guide"
-    var page3_text = "page3_text"
-    var page4 = "page4"
-
-    function hide(obj) {
-      document.getElementById(obj).style.display = "none";
-    }
-    function show(obj) {
-      document.getElementById(obj).style.display = "inline";
-    }
-    function showb(obj) {
-      document.getElementById(obj).style.display = "block";
-    }
-  </script>
+  <script src="./js/all.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 個人行為與心情之研究 </title>
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+  <!-- 表單開始處 -->
+  <div class="container">
+    <form action="https://script.google.com/macros/s/AKfycbzk3Mu5S_ygkjnboLKJoqWHnFqOqTbUyIP3kcKXA9hYhLYvjg8/exec"
+      id="myForm" method="post">
+
+<!-- start coding -->
+<input type="hidden" name="method" value="write" />
+<input type="hidden" name="version" value="G" />
+<input type="hidden" name="day" value="1" />
+
+<!-- end coding -->
+
+      <!-- 第一頁|指導語 -->
+      <div id="page1" onkeydown="if(event.keyCode==13){return false;}">
+        <h1>個人行為與心情之研究</h1>
+        <div style="text-align:right">※請使用 Google Chrome 或 Firefox 瀏覽器作答</div>
+        <p>
+          您好 <br>
+          感謝您參與本研究 <br>
+          本研究想了解個人行為與心情之間的關係<br><br>
+          接下來的流程如下 <br>
+          0. 在此頁面填入身分證(或護照)前五碼以及出生月日<br>
+          1. 針對目前的情緒狀況填寫情感方格<br>
+          2. 進行本日的書寫<br>
+          3. 再填寫一次情感方格<br>
+          以上流程，請依照您的真實狀況進行填寫<br><br>
+          本研究不需填寫姓名，僅將資料用於研究上，請您放心作答<br>
+          整個流程約需花費您 15-20 分鐘，感謝您的配合！
+          <br><br><br>
+          輔仁大學 臨床心理學系 黃意茜 敬上
+          <br>
+          <br>
+        </p>
+        <p>---</p>
+        <h2>〇、個人資料填寫</h2>
+        <p>請填入電子信箱，以便產出研究代號。 <br>
+          因本研究為匿名研究，研究結束後，將以此信箱產生的研究代號核對是否全程參與。 <br>
+          請確保每次填寫相同的信箱，以利確認為同一人之資料，並保障領取禮券與抽獎之權益</p>
+        <div>
+          <label for="email_true">電子信箱：</label>
+          <input type="email" name="email_true" id="email_true" placeholder="請輸入 email">
+        </div>
+        <div>
+          <label for="email_true">研究代號：</label>
+          <input type="text" name="email" placeholder="請填入字串" title="填入email地址" id="email" />
+          <span>（依照 email 自動產生）
+          </span>
+        </div>
+        <br>
+        <p>填寫完畢後，請按下方按鈕開始作答</p>
+        <button type="button" onclick="check_page1()">開始作答(0/3)</button>
+        <hr>
+      </div>
+
+      <!-- 第二頁|一、情感方格 -->
+      <div id="page2" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
+        <h2>一、情感方格</h2>
+
+        <span>如何透過情感方格評估你的情緒(若想更了解情感方格的填寫，請點這裡) </span>
+        <button type="button" onclick="switch_grid1()">開啟/關閉說明</button>
+
+        <div id="grid1" style="display:none">
+          <p>---</p>
+          <p>情感方格說明</p>
+          <p>情感方格是一個常被用來描述人們當下心情的測量工具，乃是同時藉由兩個向度來評量你的心情。
+            <strong>橫向向度是用來描述你的心情好壞（很高興／很不高興）；垂直的向度則用來評量你的激動程度（很激動／很不激動）。</strong>
+          </p>
+          <img src="https://i.imgur.com/FwUVZUml.png" alt="情感方格圖片">
+          <p>
+            正中央的粗體方格代表你在兩個向度上都處在中間的狀態，例如，覺得既不高興也沒有不高興，而這個心情雖然不會讓你很激動，但也不會完全沒有激動的感覺。
+            <br>
+            <br> 首先，
+
+            <strong>由橫向的向度來看</strong>，它代表的是你心情的好壞，所以右半邊的區塊代表高興的感覺；左半邊的區塊則代表不高興的感覺。越靠近右邊，表示你越高興；而越靠近左邊代表你越不高興。
+            <br>
+            <br> 再來，
+
+            <strong>由垂直的向度來看</strong>，它代表的是你的激動程度。激動程度是從英文的Arousal
+            level所翻譯過來，它描述的是你主觀認為自己生理上的激動或興奮程度，上半部的區塊代表你體驗到高於平均的激動；下半部則代表低於平均的激動。越靠近上面表示越激動、越靠近下面表示越不激動。
+            <br>
+            <br>
+
+            <strong>舉例來說</strong>：如果你同時覺得高興和激動（例如，興奮、雀躍），你的情緒狀態就會座落在右上方的象限。如果你感覺高興但沒有很激動（例如，平靜、鎮定），那麼就會是在右下方的象限。如果你感到不高興而且很激動（例如，緊張、有壓力），那你的情緒狀態就會是在左上方的象限。
+            <br>
+            <br>
+
+            <strong>第1題</strong>，是問你當下的心情好壞，在此則請你透過情感方格的橫向向度，評量出你覺得很高興還是很不高興。
+            <strong>1 4</strong>代表很不高興，
+            <strong>0 0</strong>代表沒有高興也沒有不高興，
+            <strong>2 4</strong>則是代表很高興。其中第一個數字是表示你處在
+            <strong>負向(1)</strong>、
+            <strong>正向(2)</strong>還是
+            <strong>中性(0)</strong>的情緒狀態，第二個數字則是表示心情好壞的程度，程度分別是由
+            <strong>1</strong>到
+            <strong>4</strong>。
+            <br>
+            <br>
+          </p>
+          <img src="https://i.imgur.com/Hm1VGS4l.png" alt="情感方格橫軸">
+          <br>
+          <p>
+            <strong>第2題</strong>，是問你當下的激動程度，在此請你透過情感方格的垂直向度，評量出你覺得很激動還是很不激動，
+            <strong>9</strong>代表很激動，
+            <strong>1</strong>則代表很不激動。</p>
+          <img src="https://i.imgur.com/pZHGT4Cl.png" alt="情感方格縱軸">
+          <br>
+          <p>
+            <strong>範例</strong>：若選擇2 4(橫向)以及4(垂直)，則代表</p>
+          <img src="https://i.imgur.com/BB8ftSDl.png" alt="情感方格範例">
+          <br>
+          <button type="button" onclick="switch_grid1()">開啟/關閉說明</button>
+          <br>
+        </div>
+
+        <p>---</p>
+
+        <br>
+        <p>請依照情感方格(The Affect Grid)的向度，來評估你當下的情緒</p>
+
+        <div>(1) 請問你現在的心情？(14~24)(必填)</div>
+        <div>
+          (很不高興)
+          <input type="radio" name="mood_1" id="ra1_14" value="1">
+          <label for="ra1_14">14</label>
+          <input type="radio" name="mood_1" id="ra1_13" value="2">
+          <label for="ra1_13">13</label>
+          <input type="radio" name="mood_1" id="ra1_12" value="3">
+          <label for="ra1_12">12</label>
+          <input type="radio" name="mood_1" id="ra1_11" value="4">
+          <label for="ra1_11">11</label>
+          <input type="radio" name="mood_1" id="ra1_00" value="5">
+          <label for="ra1_00">00</label>
+          <input type="radio" name="mood_1" id="ra1_21" value="6">
+          <label for="ra1_21">21</label>
+          <input type="radio" name="mood_1" id="ra1_22" value="7">
+          <label for="ra1_22">22</label>
+          <input type="radio" name="mood_1" id="ra1_23" value="8">
+          <label for="ra1_23">23</label>
+          <input type="radio" name="mood_1" id="ra1_24" value="9">
+          <label for="ra1_24">24</label>
+
+          (很高興)</div>
+
+        <br>
+        <br>
+        <img src="https://i.imgur.com/Hm1VGS4l.png" alt="情感方格橫軸">
+
+        <p>---</p>
+        <br>
+        <div>(2) 請問你的激動程度？(1~9)(必填)</div>
+        <div>(很不激動)
+          <input type="radio" name="arousal_1" id="ar1_1" value="1">
+          <label for="ar1_1">1</label>
+          <input type="radio" name="arousal_1" id="ar1_2" value="2">
+          <label for="ar1_2">2</label>
+          <input type="radio" name="arousal_1" id="ar1_3" value="3">
+          <label for="ar1_3">3</label>
+          <input type="radio" name="arousal_1" id="ar1_4" value="4">
+          <label for="ar1_4">4</label>
+          <input type="radio" name="arousal_1" id="ar1_5" value="5">
+          <label for="ar1_5">5</label>
+          <input type="radio" name="arousal_1" id="ar1_6" value="6">
+          <label for="ar1_6">6</label>
+          <input type="radio" name="arousal_1" id="ar1_7" value="7">
+          <label for="ar1_7">7</label>
+          <input type="radio" name="arousal_1" id="ar1_8" value="8">
+          <label for="ar1_8">8</label>
+          <input type="radio" name="arousal_1" id="ar1_9" value="9">
+          <label for="ar1_9">9</label>
+
+          (很激動)
+        </div>
+        <br>
+        <img src="https://i.imgur.com/pZHGT4Cl.png" alt="情感方格縱軸">
+
+        <br>
+        <br>
+        <button type="button" onclick="check_page2()">下一頁面(1/3)</button>
+        <br>
+        <hr>
+      </div>
+
+      <!-- 第三頁|二、書寫作業 -->
+      <div id="page3">
+        <div id="page3_guide" style="display:none">
+          <h2>二、書寫作業</h2>
+
+<!-- start writing_guide -->
+<p>
+  請你反思並書寫你「當天發生的三件好事」。這些事可以是大事(例如，某個孩子的誕生)，也可以是小事(例如，看美麗的夕陽)。當你寫下三件好事後，請問自己「為什麼今天會發生這件事？」以及「我該如何讓這樣的事更常發生在我的生命中？」並做書寫，<strong>寫得越詳細越好</strong>。以下為需要書寫的內容：
+  <ol>
+    <li>三件好事</li>
+    <li>為什麼今天會發生這件事？</li>
+    <li>我該如何讓這樣的事更長發生在我的生命中？</li>
+  </ol>
+
+  你寫的所有內容將完全保密。不必在意句子是否流暢、有無錯字。唯一的規則是，<strong>一旦你開始寫，請持續寫到時間結束(15分鐘)再停止</strong>。
+  <br>
+</p>
+
+<!-- end writing_guide -->
+
+          <br />
+          <input type="button" id="countbtn" value="開始作答(2/3)" onClick="timedCount();show(page3_text)">
+        </div>
+
+        <br />
+        <br />
+
+        <div id="page3_text" style="display:none">
+          <p>書寫區(必填)</p>
+          <textarea name="text" placeholder="填入書寫內容" title="填入書寫內容" style="width:500px;height:200px;"></textarea>
+          <br>
+          <span> 剩餘時間(秒):
+            <input type="text" id="txt"> </span>
+          <br>
+          <br>
+          <hr>
+        </div>
+      </div>
+
+      <!-- 第四頁|三、情感方格 -->
+      <div id="page4" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
+
+        <h2>三、情感方格</h2>
+
+        <p>請依照情感方格(The Affect Grid)的向度，
+          <strong>「再評估一次」</strong>你目前的情緒</p>
+
+
+        <div>(1) 請問你現在的心情？(14~24)(必填)</div>
+        <div>(很不高興)
+          <input type="radio" name="mood_2" id="ra2_14" value="1">
+          <label for="ra2_14">14</label>
+          <input type="radio" name="mood_2" id="ra2_13" value="2">
+          <label for="ra2_13">13</label>
+          <input type="radio" name="mood_2" id="ra2_12" value="3">
+          <label for="ra2_12">12</label>
+          <input type="radio" name="mood_2" id="ra2_11" value="4">
+          <label for="ra2_11">11</label>
+          <input type="radio" name="mood_2" id="ra2_00" value="5">
+          <label for="ra2_00">00</label>
+          <input type="radio" name="mood_2" id="ra2_21" value="6">
+          <label for="ra2_21">21</label>
+          <input type="radio" name="mood_2" id="ra2_22" value="7">
+          <label for="ra2_22">22</label>
+          <input type="radio" name="mood_2" id="ra2_23" value="8">
+          <label for="ra2_23">23</label>
+          <input type="radio" name="mood_2" id="ra2_24" value="9">
+          <label for="ra2_24">24</label>
+
+          (很高興)
+        </div>
+
+        <br>
+        <br>
+        <img src="https://i.imgur.com/Hm1VGS4l.png" alt="情感方格橫軸">
+
+        <p>---</p>
+        <br>
+        <div>(2) 請問你的激動程度？(1~9)(必填)</div>
+        <div>
+          (很不激動)
+          <input type="radio" name="arousal_2" id="ar2_1" value="1">
+          <label for="ar2_1">1</label>
+          <input type="radio" name="arousal_2" id="ar2_2" value="2">
+          <label for="ar2_2">2</label>
+          <input type="radio" name="arousal_2" id="ar2_3" value="3">
+          <label for="ar2_3">3</label>
+          <input type="radio" name="arousal_2" id="ar2_4" value="4">
+          <label for="ar2_4">4</label>
+          <input type="radio" name="arousal_2" id="ar2_5" value="5">
+          <label for="ar2_5">5</label>
+          <input type="radio" name="arousal_2" id="ar2_6" value="6">
+          <label for="ar2_6">6</label>
+          <input type="radio" name="arousal_2" id="ar2_7" value="7">
+          <label for="ar2_7">7</label>
+          <input type="radio" name="arousal_2" id="ar2_8" value="8">
+          <label for="ar2_8">8</label>
+          <input type="radio" name="arousal_2" id="ar2_9" value="9">
+          <label for="ar2_9">9</label>
+
+          (很激動)</div>
+        <br>
+        <img src="https://i.imgur.com/pZHGT4Cl.png" alt="情感方格縱軸">
+
+        <br>
+        <br>
+        <button type="button" value="提交" id="subbtn" onclick="check_page4()">提交</button>
+        <hr>
+      </div>
+
+      <!-- 第五頁|詢問 email -->
+      <!-- <div id="page5" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
+        <p>因許多人反映在填寫問卷時，研究代號有輸入錯誤的狀況，因此麻煩您再填一次 email，以利我們進行雙重確認，非常感謝您！</p>
+        <input type="text" name="email_true" placeholder="請填入 email" title="填入email地址" id="input_page5" />（必填）
+        <br>
+        <br>
+        <button type="button" id="subbtn" onclick="check_page5()">提交</button>
+        <hr>
+      </div> -->
+
+    </form>
+  </div>
+
+  <!-- 語法區 -->
+  <script src="./js/all.js"></script>
+</body>
+
+</html>

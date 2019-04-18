@@ -14,10 +14,10 @@ function encode(e) {
   var newStr = tempArr.join('')
   emailIdInput.value = newStr
 }
-function copyId(e) {
+function copyId(e) { 
   
-  //Regular expression Testing
-  emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+  //Regular expression Testing 
+  var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
   //validate ok or not
   if(emailInput.value.search(emailRule)!= -1){

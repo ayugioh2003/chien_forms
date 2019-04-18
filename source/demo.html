@@ -25,7 +25,7 @@
       method="post">
       <input type="hidden" name="method" value="write" />
       <input type="hidden" name="version" value="E" />
-      <input type="hidden" name="day" value="4" />
+      <input type="hidden" name="day" value="1" />
       <!-- <div id="version" style="display:none">
         版本
         <input type="text" name="version" value="N">
@@ -63,7 +63,7 @@
         <br>
         <br>
         <p>填寫完畢後，請按下方按鈕開始作答</p>
-        <button type="button" onclick="check_page1()">開始作答(0/4)</button>
+        <button type="button" onclick="check_page1()">開始作答(0/3)</button>
         <hr>
       </div>
 
@@ -191,7 +191,7 @@
 
         <br>
         <br>
-        <button type="button" onclick="check_page2()">下一頁面(1/4)</button>
+        <button type="button" onclick="check_page2()">下一頁面(1/3)</button>
         <br>
         <hr>
       </div>
@@ -208,7 +208,7 @@
           </p>
 
           <br />
-          <input type="button" id="countbtn" value="開始作答(2/4)" onClick="timedCount();show(page3_text)">
+          <input type="button" id="countbtn" value="開始作答(2/3)" onClick="timedCount();show(page3_text)">
         </div>
 
         <br />
@@ -296,17 +296,7 @@
 
         <br>
         <br>
-        <button type="button"  onclick="check_page4()">下一頁面(3/4)</button>
-        <hr>
-      </div>
-
-      <!-- 第五頁|詢問 email -->
-      <div id="page5" style="display:none" onkeydown="if(event.keyCode==13){return false;}">
-        <p>因許多人反映在填寫問卷時，研究代號有輸入錯誤的狀況，因此麻煩您再填一次 email，以利我們進行雙重確認，非常感謝您！</p>
-        <input type="text" name="email_true" placeholder="請填入 email" title="填入email地址" id="input_page5" />（必填）
-        <br>
-        <br>
-        <button type="button" id="subbtn"  onclick="check_page5()">提交</button>
+        <button type="button" value="提交" id="subbtn" onclick="check_page4()">提交</button>
         <hr>
       </div>
     </form>
@@ -344,18 +334,17 @@
 
 
     // 計時書寫的時間，時間到執行某個指令 書寫時間 15*60
-    var c = 15 * 60
+    var c = 10
     var t
 
     function timedCount() {
       document.getElementById('txt').value = `${parseInt(c / 60)}分鐘 ${c % 60}秒`
       c = c - 1
 
-      if (c < 1 * 60) {
+      if (c < 5) {
         document.getElementById('txt').style.color = '#FFFFFF'
         document.getElementById('txt').style.backgroundColor = '#EE9999'
       }
-
 
       if (c == -2) {
         hide(page3)
@@ -416,28 +405,11 @@
       var arousal2_value = document.getElementById('myForm').arousal_2.value
 
       if (mood2_value && arousal2_value) {
-        hide(page4);
-        show(page5);
+        document.getElementById("myForm").submit()
       }
       else {
         alert(page4_alert);
         return false;
-      }
-    }
-
-
-    function check_page5() {
-
-      var page5_alert = "請填入 email";
-      var page5_value = document.getElementById("input_page5").value
-
-      if (page5_value = null || page5_value == "") {
-        page5_alert = "請填入 email";
-        alert(page5_alert);
-        return false;
-      }
-      else {
-        document.getElementById("myForm").submit()
       }
     }
 
@@ -454,7 +426,6 @@
     var page3_guide = "page3_guide"
     var page3_text = "page3_text"
     var page4 = "page4"
-    var page5 = "page5"
 
     function hide(obj) {
       document.getElementById(obj).style.display = "none";

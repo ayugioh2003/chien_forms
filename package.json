@@ -1,0 +1,30 @@
+{
+  "name": "chien_forms",
+  "version": "1.0.0",
+  "description": "這是用來開給我朋友用的，所以是自用用途。它是一份心理學相關的研究問卷，想探討情緒與書寫之間的關聯。因為研究需要對控制某些頁面的書寫時間，而 Google 表單和市面上常見的表單沒辦法做到，因此就有了這個專案。目前這個專案主要希望能達到的功能有",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayugioh2003/chien_forms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayugioh2003/chien_forms/issues"
+  },
+  "homepage": "https://github.com/ayugioh2003/chien_forms#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "gulp": "3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-html-extend": "^1.1.6"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
