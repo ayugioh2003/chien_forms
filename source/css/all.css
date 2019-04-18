@@ -8,5 +8,7 @@
       font-family: '-apple-system', 'BlinkMacSystemFont', "Segoe UI", "Roboto",'Noto Sans TC', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
     .input {
+      padding-left: 0.5rem;
+      vertical-align: text-bottom;
       font-size: 1rem;
     }
