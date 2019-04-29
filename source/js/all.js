@@ -25,7 +25,7 @@ function switch_grid2() {
 
 
 // 計時書寫的時間，時間到執行某個指令 書寫時間 15*60
-var c = 5 // 15 * 60
+var c =  15 * 60
 var t
 
 function timedCount() {
